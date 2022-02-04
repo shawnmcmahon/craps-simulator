@@ -86,11 +86,13 @@ export default function Game() {
 
 
 
+
   return (
     <div>
       <p>Dice One: {diceOne} </p>
       <p>Dice Two: {diceTwo} </p>
       <p>Point: {point} </p>
+      <button onClick={diceRoll}>Roll Dice</button>
     </div>
   )
 }
