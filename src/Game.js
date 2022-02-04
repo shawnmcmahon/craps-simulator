@@ -75,13 +75,26 @@ export default function Game() {
 
 
   useEffect(() => {
-    diceRoll();
-  }, [])
+
+
+  })
 
   const diceRoll = () => {
     setDiceOne(Math.floor(Math.random() * 6) + 1);
     setDiceTwo(Math.floor(Math.random() * 6) + 1); 
     console.log(diceOne, diceTwo)
+    definePoint();
+  };
+
+  const definePoint = () => {
+      if (diceOne + diceTwo === 4 || 5 || 6 || 8 || 9 || 10) {
+        setPoint(diceOne + diceTwo);
+      };
+
+      if (point !== undefined && (diceOne + diceTwo === 7)) {
+        setPoint(undefined);
+      }
+    
   };
 
 
