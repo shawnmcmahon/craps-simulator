@@ -1,15 +1,18 @@
-import Game from './Game';
-import React from 'react'; 
-import Enzyme, { mount } from 'enyzme'; 
+
+const Enzyme, { mount } = require('enyzme'); 
 import Adapter from 'enzyme-adapter-react-16'; 
 Enzyme.configure({ adapter: new Adapter() })
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(Game.diceRoll).toBe([1,1]);
-});
+import Game from './Game';
+
 
 describe('Game Component', () => {
+  let wrapper; 
   beforeEach(() => {
+    wrapper = mount(<Game />)
+  });
 
-  })
+    it('works', () => {
+      expect(2 + 2).toEqual(4);
+    })
 })
