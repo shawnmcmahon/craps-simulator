@@ -70,7 +70,6 @@ export default function Game() {
     dontPassOdds: 0,
     Come: 0, 
     dontCome: 0, 
-
   });
 
 
